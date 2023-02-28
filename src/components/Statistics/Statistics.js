@@ -1,14 +1,19 @@
 import PropTypes from 'prop-types';
+import { ThemeProvider } from 'styled-components';
+import { theme } from '../Layout';
+import { Stats } from './Statistics.styled';
 
 export const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
     return (
-        <ul>
+        <ThemeProvider theme={theme}>
+        <Stats>
             <li>Good: {good}</li>
             <li>Neutral: {neutral}</li>
             <li>Bad: {bad}</li>
             <li>Total: {total} </li>
             <li>Positive Feedback: {positivePercentage}</li>
-        </ul>
+        </Stats>
+        </ThemeProvider>
     )
 };
 
