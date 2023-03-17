@@ -63,3 +63,5 @@ export const App = () => {
     </Layout>
   )
 }
+  
+// function component
